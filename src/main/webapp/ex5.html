@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자료형</title>
+
+<script>
+	let a = 10;
+	console.log(typeof(a)); // nunber type
+	console.log(typeof('a:', a));
+	let a2 = 3.14;
+	console.log(typeof(a2)); // 실수도 number type
+	
+	let b = true; // true
+	console.log(typeof(b)); // boolean type
+	let c = 7 > 5;
+	if(c) {
+		console.log('7은 5보다 크다');
+	}
+	
+	let d = 'hello'; // "", ''
+	console.log(typeof(d)); // String type
+	
+	let e;
+	console.log(typeof(e)); // 값이 없을 때... undefined type
+	
+	let f = null; 
+	console.log(typeof(f)); // object type 
+	
+	let g = [1, 2, 3]; // 배열
+	console.log(typeof(g)); // object type
+	console.log(g[1]); // 2
+	
+	let h = {name : '루피', age : 19}; // 객체 .. object type
+	console.log(typeof(h));
+	console.log(h.name) // 루피
+	
+	function i2() { // 이런 코드는 어디에 적혀있든 실행시 맨 위로 이동하게 됨
+		alert('test..(전통적 방법의 함수생성)')
+	}
+	
+	let i = function() { // 변수에 함수가 대입된다 : 1급 함수/자바는 변수에 메소드를 담을 수 없다는 게 차이점
+		alert('test...') 
+		return true;
+	};
+	console.log(typeof(i)); // function type 크게보면 이것도 object type 
+	i(); // 함수호출 연산자
+	console.log(i); // 함수코드 출력됨
+	
+	let j = i; // j에 i가 대입됐으니 j도 함수 함수가 다른 함수의 매개변수가 될 수 있다
+	console.log(typeof(j)) // function type
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

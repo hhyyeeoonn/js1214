@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열, 객체</title>
+
+<script>
+	
+	// 배열
+	let arr = ['김자바', '이자바', '박자바', '최자바']; // index 0, 1, 2, 3
+	for(let i = 0; i < arr.length; i++) {
+		console.log(arr[i]);
+	}
+	
+	// foreach문과 같은 역할을 하는 함수 (자바스크립트에는 foreach문이 없다)
+	let t = function(item) {
+		console.log(item);
+	};
+	arr.forEach(t);
+	
+	arr.forEach(function(item) { // 1급함수 
+					console.log(item);
+				});
+	
+	
+	// 객체
+	let student = {name : ''
+					, age : 0
+					, gender : ''
+					, hobby : ['독서', '인스타', '사업']
+					, car : {name : '아반떼', cc : 1500, company : '현대'}
+					, play : function() { // 멤버함수(메소드)
+						alert(this.name + '은 놀다') // this (매우매우중요!!!!!)
+					}
+				}; // 객체생성 프로토타입
+	//let student2 = student;
+
+	let kim = student;
+	kim.name = '킴카다시안';
+	kim.age = 27;
+	kim.gender = '여';
+
+	console.log(kim.name, kim.age, kim.hobby[3], kim.car.name); 
+	kim.play();
+</script>
+
+</head>
+<body>
+
+</body>
+</html>
